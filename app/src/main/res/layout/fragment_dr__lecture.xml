@@ -8,66 +8,74 @@
 
   <Button
       android:id="@+id/button1"
-      android:layout_width="@dimen/_130sdp"
-      android:layout_height="@dimen/_130sdp"
+      android:layout_width="@dimen/_120sdp"
+      android:layout_height="@dimen/_120sdp"
       android:layout_marginStart="50dp"
       android:layout_marginLeft="50dp"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="30dp"
       android:layout_marginEnd="50dp"
       android:layout_marginRight="50dp"
-      android:background="@drawable/group_btn"
+      android:background="@color/button"
+      android:padding="@dimen/_10sdp"
       android:text="group one"
-      android:textSize="40sp"
+      android:textSize="28sp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      android:padding="@dimen/_10sdp"/>
+      />
 
   <Button
       android:id="@+id/button2"
-      android:layout_width="176dp"
-      android:layout_height="183dp"
+      android:layout_width="@dimen/_120sdp"
+      android:layout_height="@dimen/_120sdp"
       android:layout_marginStart="50dp"
       android:layout_marginLeft="50dp"
       android:layout_marginEnd="50dp"
       android:layout_marginRight="50dp"
-      android:background="@drawable/group_btn"
+      android:background="@color/colorPrimary"
+      android:padding="@dimen/_10sdp"
       android:text="group tow"
-      android:textSize="40sp"
+      android:textSize="28sp"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.503"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/button1"
-      android:padding="@dimen/_10sdp"/>
+      app:layout_constraintTop_toBottomOf="@+id/button1" />
+
   <Button
       android:id="@+id/button3"
-      android:layout_width="@dimen/_130sdp"
-      android:layout_height="@dimen/_130sdp"
+      android:layout_width="@dimen/_120sdp"
+      android:layout_height="@dimen/_120sdp"
       android:layout_marginStart="50dp"
       android:layout_marginLeft="50dp"
       android:layout_marginEnd="50dp"
       android:layout_marginRight="50dp"
-      android:background="@drawable/group_btn"
+      android:background="@color/colorPrimaryDark"
+      android:padding="@dimen/_10sdp"
       android:text="group three"
-      android:textSize="40sp"
+      android:textSize="25sp"
+      app:layout_constraintBottom_toTopOf="@+id/button4"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.503"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/button2"
-      android:padding="@dimen/_10sdp"/>
+      app:layout_constraintTop_toBottomOf="@+id/button2" />
+
   <Button
       android:id="@+id/button4"
-      android:layout_width="@dimen/_130sdp"
-      android:layout_height="@dimen/_130sdp"
+      android:layout_width="@dimen/_120sdp"
+      android:layout_height="@dimen/_120sdp"
       android:layout_marginStart="50dp"
       android:layout_marginLeft="50dp"
       android:layout_marginEnd="50dp"
       android:layout_marginRight="50dp"
-      android:background="@drawable/group_btn"
+      android:layout_marginBottom="50dp"
+      android:background="@color/line"
+      android:padding="@dimen/_10sdp"
       android:text="group four"
-      android:textSize="40sp"
+      android:textSize="25sp"
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/button3"
-      android:padding="@dimen/_10sdp"/>
+      app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 
 

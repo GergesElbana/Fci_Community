@@ -4,27 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dr_Tablayout.Doctor_activity"
-    android:orientation="vertical"
-    android:background="@color/backgrond"
-   >
+    tools:context=".St_Tablayout.St_mainactivity"
+    android:orientation="vertical">
+
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout"
+        android:id="@+id/st_tablayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:tabTextColor="#F9A825"
         android:layoutDirection="ltr"
 
-
         />
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
+        android:id="@+id/st_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layoutDirection="ltr"
-
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
 
 </LinearLayout>

@@ -31,4 +31,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
     // dependancy for size "sdp"
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    // dependance for circl image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
