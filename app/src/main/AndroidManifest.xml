@@ -12,13 +12,19 @@
         <activity android:name=".St_Tablayout.St_mainactivity"></activity>
         <activity android:name=".Dr_LecterList" />
         <activity android:name=".Dr_Tablayout.Doctor_activity">
+
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Lecture.Lecture_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Lecture.St_Absence"/>
+        <activity android:name=".Lecture.St_Assignment"/>
     </application>
 
 </manifest>
