@@ -9,18 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".St_Tablayout.St_mainactivity"></activity>
-        <activity android:name=".Dr_LecterList" />
-        <activity android:name=".Dr_Tablayout.Doctor_activity">
+        <activity android:name=".St_Tablayout.St_mainactivity">
 
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Lecture.Lecture_activity">
+        <activity android:name=".Dr_LecterList" />
+        <activity android:name=".Dr_Lecture.Activity_Dr_Lecture_List"/>
+        <activity android:name=".Dr_Lecture.Dr_Absence"/>
+        <activity android:name=".Dr_Lecture.Dr_Assinment"/>
+        <activity android:name=".Dr_Tablayout.Doctor_activity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Lecture.Lecture_activity">
 
         </activity>
         <activity android:name=".Lecture.St_Absence"/>

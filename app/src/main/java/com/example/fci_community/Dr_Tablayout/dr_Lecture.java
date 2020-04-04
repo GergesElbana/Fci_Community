@@ -1,6 +1,7 @@
 package com.example.fci_community.Dr_Tablayout;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.fci_community.Dr_Lecture.Activity_Dr_Lecture_List;
 import com.example.fci_community.R;
 
 /**
@@ -29,6 +31,8 @@ public class dr_Lecture extends Fragment implements View.OnClickListener {
         btn_3=(Button) v.findViewById(R.id.button3);
         btn_4=(Button) v.findViewById(R.id.button4);
 
+        btn_1.setOnClickListener(this);
+
         return v;
     }
 
@@ -36,7 +40,8 @@ public class dr_Lecture extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button1:
-
+                Intent intent=new Intent(getActivity(), Activity_Dr_Lecture_List.class);
+                startActivity(intent);
                 break;
             case R.id.button2:
 

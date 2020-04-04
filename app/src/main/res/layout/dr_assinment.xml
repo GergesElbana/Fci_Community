@@ -5,16 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_115sdp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
         android:background="@drawable/questi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,22 +21,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_30sdp"
             android:text="Question :- "
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <EditText
+            android:id="@+id/et_Question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="50dp"
-            android:text="aaaa bbbbbb njjiojk"
-            android:textColor="#000"
-            android:textSize="15sp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:text="nnnnnnnnnn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,11 +44,14 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_160sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -61,127 +61,132 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15sdp"
-            android:text=" 1-"
+            android:text=" 1- "
             android:textColor="#000"
-            android:textSize="20sp" />
-        <TextView
-            android:id="@+id/answer_1"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/et_answer1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:text="fnmm"
-            android:textSize="15sp"
-            android:textColor="#000" />
-
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="nnnnnnnnn"/>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_230sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <TextView
             android:id="@+id/txt_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15sdp"
-            android:text=" 2-"
+            android:text=" 2- "
             android:textColor="#000"
-            android:textSize="20sp" />
-        <TextView
-            android:id="@+id/answer_2"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/et_answer2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:text="fnmm"
-            android:textSize="15sp"
-            android:textColor="#000" />
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="nnnnnnnnn"/>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="360dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_300sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <TextView
             android:id="@+id/txt_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15sdp"
-            android:text=" 3-"
+            android:text=" 3- "
             android:textColor="#000"
-            android:textSize="20sp" />
-        <TextView
-            android:id="@+id/answer_3"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/et_answer3"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:text="fnmm"
-            android:textSize="15sp"
-            android:textColor="#000" />
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="nnnnnnnnn"/>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_370sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <TextView
             android:id="@+id/txt_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15sdp"
-            android:text=" 4-"
+            android:text=" 4- "
             android:textColor="#000"
-            android:textSize="20sp" />
+            android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/answer_4"
+        <EditText
+            android:id="@+id/et_answer4"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:text="fnmm"
-            android:textSize="15sp"
-            android:textColor="#000" />
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="nnnnnnnnn"/>
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/btn_mark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="550dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginStart="@dimen/_145sdp"
+        android:layout_marginLeft="@dimen/_145sdp"
+        android:layout_marginTop="@dimen/_450sdp"
+        android:layout_marginEnd="@dimen/_150sdp"
+        android:layout_marginRight="@dimen/_150sdp"
         android:background="#6b48ff"
         android:text="mark"
         android:textColor="#fff"
