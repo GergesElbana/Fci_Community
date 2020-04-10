@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fci_community.Dr_Tablayout.Doctor_activity;
+import com.example.fci_community.Lecture.Lecture_activity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -37,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
           @Override
           public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
              if(firebaseAuth.getCurrentUser()!=null){
-                 Intent it=new Intent(MainActivity.this, Doctor_activity.class);
-                 startActivity(it);
+                // Intent it=new Intent(MainActivity.this, Doctor_activity.class);
+                // startActivity(it);
 
 
-             }
-            /* String s=firebaseAuth.getUid();
+
+             String s=firebaseAuth.getUid();
 
              if (s.equals("Bh6lSxglzkWq1emzgjJkRG2SNXs1")){
 
@@ -53,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
                  Intent it=new Intent(MainActivity.this, Doctor_activity.class);
                  startActivity(it);
 
-             }*/
+             }
 
 
-          }
+          }}
       };
     }
 

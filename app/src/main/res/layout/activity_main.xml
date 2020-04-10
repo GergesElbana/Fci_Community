@@ -23,15 +23,16 @@
         <EditText
             android:id="@+id/useremail"
             android:layout_width="@dimen/_250sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_45sdp"
             android:layout_gravity="center" />
 
         <EditText
             android:id="@+id/userpass"
             android:layout_width="@dimen/_250sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_45sdp"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_20sdp" />
+            android:layout_marginTop="@dimen/_20sdp"
+            android:inputType="textPassword"/>
 
         <Button
             android:id="@+id/loginBtn"
@@ -39,8 +40,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_40sdp"
-            android:text="login"
-            android:onClick="loginbuttonclicked"/>
+            android:text="Login"
+            android:onClick="loginbuttonclicked"
+            android:textAllCaps="false"
+            />
 
 
     </LinearLayout>
