@@ -24,7 +24,7 @@ public class dr_HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v=inflater.inflate(R.layout.fragment_dr__lecture, container, false);
+        View v=inflater.inflate(R.layout.fragment_dr__home, container, false);
         return v;
     }
 

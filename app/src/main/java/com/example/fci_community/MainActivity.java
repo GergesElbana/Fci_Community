@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,25 +20,29 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-    FirebaseAuth mAuth;
-    FirebaseDatabase mdatabase;
-    DatabaseReference mref;
+           FirebaseAuth mAuth;
   private  FirebaseAuth.AuthStateListener mAuthstatelistner;
   private  EditText edtPass,edtmail;
-  private  Button btnLogin;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("Fci_community");
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        edtmail=(EditText)findViewById(R.id.useremail);
-        edtPass=(EditText)findViewById(R.id.userpass);
-      mAuth= FirebaseAuth.getInstance();
-      mAuthstatelistner= new FirebaseAuth.AuthStateListener() {
+         edtmail=(EditText)findViewById(R.id.useremail);
+         edtPass=(EditText)findViewById(R.id.userpass);
+         getSupportActionBar().hide();
+        myRef.child("students").child("1").setValue("nahla");
+         mAuth= FirebaseAuth.getInstance();
+         mAuthstatelistner= new FirebaseAuth.AuthStateListener() {
           @Override
           public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
              if(firebaseAuth.getCurrentUser()!=null){
                 // Intent it=new Intent(MainActivity.this, Doctor_activity.class);
-                // startActivity(it);
+               //  startActivity(it);
 
 
 
@@ -72,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
     public void loginbuttonclicked(View view) {
         String mail =edtmail.getText().toString();
         String pass=edtPass.getText().toString();
+
+
         if(TextUtils.isEmpty(mail)||TextUtils.isEmpty(pass))
         {
 

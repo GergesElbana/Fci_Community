@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" >
 
         <EditText
-            android:id="@+id/dr_Code"
+            android:id="@+id/Lct_Code"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"/>
 
@@ -50,7 +50,8 @@
         android:text="Next"
         android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="OpenNewLecture"/>
 
     <Button
         android:id="@+id/btn_end"
@@ -63,6 +64,7 @@
         android:text="End"
         android:textColor="#fff"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="EndLecture"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
