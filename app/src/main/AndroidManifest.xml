@@ -10,11 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Student_Iformation">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Dr_Tablayout.ManageLectureActivity" />
         <activity android:name=".St_Tablayout.St_mainactivity" />
@@ -24,7 +20,11 @@
         <activity android:name=".Dr_Lecture.Dr_Assinment" />
         <activity android:name=".Dr_Tablayout.Doctor_activity" />
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Lecture.Lecture_activity" />
         <activity android:name=".Lecture.St_Absence" />

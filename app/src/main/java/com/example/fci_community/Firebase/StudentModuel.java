@@ -3,17 +3,16 @@ package com.example.fci_community.Firebase;
 public class StudentModuel {
   private String name;
   private String mail;
-  private String photo;
   private String passwoard;
   private String  id;
 
     public StudentModuel() {
     }
 
-    public StudentModuel(String name, String mail, String photo, String passwoard,String id) {
+    public StudentModuel(String name, String mail,  String passwoard,String id) {
         this.name = name;
         this.mail = mail;
-        this.photo = photo;
+
         this.passwoard = passwoard;
         this.id=id;
     }
@@ -34,13 +33,7 @@ public class StudentModuel {
         this.mail = mail;
     }
 
-    public String getPhoto() {
-        return photo;
-    }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
 
     public String getPasswoard() {
         return passwoard;

@@ -1,39 +1,55 @@
 package com.example.fci_community;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fci_community.Firebase.StudentModuel;
+import com.example.fci_community.St_Tablayout.St_mainactivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Student_Iformation extends AppCompatActivity {
-     private   EditText St_Name,St_mail,St_pass,St_id;
-
+     private   EditText St_Name,St_mail,St_pass,St_id,St_phot;
+     public static   StudentModuel stm;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student__iformation);
-        St_Name=(EditText)findViewById(R.id.StudentName);
-        St_mail=(EditText)findViewById(R.id.StudentMail);
-        St_pass=(EditText)findViewById(R.id.StudentPass);
-        St_id=(EditText)findViewById(R.id.StudentID);
+        compinitial();
 
     }
 
+private void compinitial(){
 
+    St_Name=(EditText)findViewById(R.id.StudentName);
+    St_mail=(EditText)findViewById(R.id.StudentMail);
+    St_pass=(EditText)findViewById(R.id.StudentPass);
+    St_id=(EditText)findViewById(R.id.StudentID);
+    St_id=(EditText)findViewById(R.id.StudentID);
 
-
-
+}
     public void StudentData(View view) {
-        StudentModuel stm=new StudentModuel(St_Name.getText().toString(),St_mail.getText().toString(),
-                St_pass.getText().toString(),St_id.getText().toString(),St_id.getText().toString() );
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference();
+        String stName=St_Name.getText().toString();
+        String stid=St_id.getText().toString();
+        String stMail=St_mail.getText().toString();
+        String stPas=St_pass.getText().toString();
+        if (TextUtils.isEmpty(stName)||TextUtils.isEmpty(stMail)
+        ||TextUtils.isEmpty(stPas)||TextUtils.isEmpty(stid)){
+
+            Toast.makeText(this, "Enter All Data", Toast.LENGTH_SHORT).show();
+        } else {
+     stm =new StudentModuel(stName,stMail,stPas,stid);
         myRef.child("Groups").child("GroupOne").
-                child("Students").push().setValue(stm);
+        child("Students").child(stid).setValue(stm);
+        Intent intent=new Intent(Student_Iformation.this, St_mainactivity.class);
+        startActivity(intent);}
     }
 }

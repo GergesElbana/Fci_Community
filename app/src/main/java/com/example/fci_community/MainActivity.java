@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fci_community.Dr_Tablayout.Doctor_activity;
-import com.example.fci_community.Lecture.Lecture_activity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
              if (s.equals("Bh6lSxglzkWq1emzgjJkRG2SNXs1")){
 
-                 Intent in=new Intent(MainActivity.this, Lecture_activity.class);
+                 Intent in=new Intent(MainActivity.this, Student_Iformation.class);
                  startActivity(in);
              }
              else if(s.equals("vhbutJcCCWUY7DKqKBTPVMwteph1")){
