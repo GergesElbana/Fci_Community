@@ -26,17 +26,13 @@ public class St_Absence extends AppCompatActivity {
         st_code=(EditText)findViewById(R.id.student_code);
 
     }
-
     public void st_starlecture(View view) {
         String b=st_code.getText().toString();
-        if (b.equals(Dr_Absence.lct_code)){
+      if (b.equals(Dr_Absence.lct_code)){
 
-            myRef.child("cs").child("Absance").push().setValue("ddddddddddd");
+       //   StudentModuel s=new
+          //  myRef.child("k").setValue(Student);
             Toast.makeText(this, "Absance tacked", Toast.LENGTH_SHORT).show();
             finish();
-        }
-
-
-
-    }
+        } }
 }

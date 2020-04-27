@@ -16,16 +16,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
            FirebaseAuth mAuth;
   private  FirebaseAuth.AuthStateListener mAuthstatelistner;
   private  EditText edtPass,edtmail;
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("Fci_community");
+
 
 
     @Override
@@ -35,17 +32,12 @@ public class MainActivity extends AppCompatActivity {
          edtmail=(EditText)findViewById(R.id.useremail);
          edtPass=(EditText)findViewById(R.id.userpass);
          getSupportActionBar().hide();
-        myRef.child("students").child("1").setValue("nahla");
+
          mAuth= FirebaseAuth.getInstance();
          mAuthstatelistner= new FirebaseAuth.AuthStateListener() {
           @Override
           public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
              if(firebaseAuth.getCurrentUser()!=null){
-                // Intent it=new Intent(MainActivity.this, Doctor_activity.class);
-               //  startActivity(it);
-
-
-
              String s=firebaseAuth.getUid();
 
              if (s.equals("Bh6lSxglzkWq1emzgjJkRG2SNXs1")){
@@ -58,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
                  startActivity(it);
 
              }
-
-
           }}
       };
     }
@@ -73,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void loginbuttonclicked(View view) {
-        String mail =edtmail.getText().toString();
-        String pass=edtPass.getText().toString();
+        String mail =edtmail.getText().toString().trim();
+        String pass=edtPass.getText().toString().trim();
 
 
         if(TextUtils.isEmpty(mail)||TextUtils.isEmpty(pass))
@@ -93,9 +83,6 @@ public class MainActivity extends AppCompatActivity {
 
                  }
              });
-
-
-
         }
 
 

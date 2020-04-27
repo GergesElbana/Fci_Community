@@ -23,9 +23,11 @@ public class Dr_Absence extends AppCompatActivity {
 
     public void OpenNewLecture(View view) {
         lct_code =doctor_code.getText().toString();
-        finish();
+
     }
 
     public void EndLecture(View view) {
+
+        finish();
     }
 }
