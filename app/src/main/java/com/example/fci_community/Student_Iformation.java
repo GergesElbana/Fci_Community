@@ -17,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Student_Iformation extends AppCompatActivity {
      private   EditText St_Name,St_mail,St_pass,St_id,St_phot;
      public static   StudentModuel stm;
+     public static String stName;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
     @Override
@@ -37,7 +38,7 @@ private void compinitial(){
 
 }
     public void StudentData(View view) {
-        String stName=St_Name.getText().toString();
+         stName=St_Name.getText().toString();
         String stid=St_id.getText().toString();
         String stMail=St_mail.getText().toString();
         String stPas=St_pass.getText().toString();

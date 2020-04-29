@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.fci_community.Dr_Lecture.Dr_Absence;
 import com.example.fci_community.Firebase.StudentModuel;
 import com.example.fci_community.R;
+import com.example.fci_community.Student_Iformation;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,7 +39,7 @@ public class St_Absence extends AppCompatActivity {
     public void st_starlecture(View view) {
         String b=st_code.getText().toString();
       if (b.equals(Dr_Absence.lct_code)){
-          myRefl.addValueEventListener(new ValueEventListener() {
+            myRefl.addValueEventListener(new ValueEventListener() {
               @Override
               public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                   StudentModuel g=new StudentModuel();
@@ -54,7 +55,7 @@ public class St_Absence extends AppCompatActivity {
           });
 
 
-            myRefl.child("GroupOne").child("Subjects").child("Java").child("Absance").push().setValue(gerges);
+            myRefl.child("GroupOne").child("Subjects").child("Java").child("Absance").push().setValue(Student_Iformation.stName);
             Toast.makeText(this, "Absance tacked", Toast.LENGTH_SHORT).show();
             
         } }
