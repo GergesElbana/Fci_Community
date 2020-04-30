@@ -19,7 +19,6 @@ import com.example.fci_community.R;
  */
 public class StartLctureFragment extends Fragment {
     private TextView Absanacetxt,Assignmenttxt;
-
     public StartLctureFragment() {
 
 
@@ -33,6 +32,7 @@ public class StartLctureFragment extends Fragment {
 
         Absanacetxt=(TextView)v.findViewById(R.id.tex_AbsanceCode);
         Assignmenttxt=(TextView)v.findViewById(R.id.tex_Assignment);
+
 
 
         Absanacetxt.setOnClickListener(new View.OnClickListener() {

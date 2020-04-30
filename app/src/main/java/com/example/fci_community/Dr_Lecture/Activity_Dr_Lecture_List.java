@@ -30,8 +30,9 @@ public class Activity_Dr_Lecture_List extends AppCompatActivity implements Adapt
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        String Dr_valuePosition=(String)lectureListView.getItemAtPosition(position);
                 Intent intent = new Intent(Activity_Dr_Lecture_List.this, ManageLectureActivity.class);
+                intent.putExtra("sub_name",Dr_valuePosition);
                 startActivity(intent);
     }
 }

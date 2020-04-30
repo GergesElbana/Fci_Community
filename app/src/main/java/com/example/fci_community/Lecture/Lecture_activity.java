@@ -15,6 +15,7 @@ public class Lecture_activity extends AppCompatActivity implements View.OnClickL
 
     Button buttonAbsence,buttonAssign;
     TextView txtItem;
+    public static String strName;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class Lecture_activity extends AppCompatActivity implements View.OnClickL
         buttonAssign.setOnClickListener(this);
         txtItem=(TextView)findViewById(R.id.item_name);
 
-        String strName=getIntent().getExtras().getString("name");
+        strName=getIntent().getExtras().getString("name");
         txtItem.setText(strName);
 
     }

@@ -1,6 +1,7 @@
 package com.example.fci_community.Dr_Tablayout;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -12,6 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 public class ManageLectureActivity extends AppCompatActivity {
     private   TabLayout dr_tp;
     private ViewPager dr_vp;
+   private TextView drItemName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,10 @@ public class ManageLectureActivity extends AppCompatActivity {
 
         dr_vp=(ViewPager)findViewById(R.id.viewpager1);
         dr_tp=(TabLayout)findViewById(R.id.tablayout1);
+        drItemName=(TextView)findViewById(R.id.dr_itemname);
+
+        String Dr_itemName=getIntent().getExtras().getString("sub_name");
+        drItemName.setText(Dr_itemName);
 
         setViewPager1();
     }

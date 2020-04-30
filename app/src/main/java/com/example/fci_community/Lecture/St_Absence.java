@@ -25,6 +25,7 @@ public class St_Absence extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRefl = database.getReference("Groups");
     TextView bbbb;
+    private String []Sub_arr={"CS","IT","IS"};
     private String gerges;
 
     @Override
@@ -33,30 +34,37 @@ public class St_Absence extends AppCompatActivity {
         setContentView(R.layout.st_absence);
         getSupportActionBar().hide();
         st_code=(EditText)findViewById(R.id.student_code);
-        bbbb=(EditText)findViewById(R.id.xxxx);
+        bbbb=(TextView) findViewById(R.id.xxxx);
 
     }
     public void st_starlecture(View view) {
         String b=st_code.getText().toString();
       if (b.equals(Dr_Absence.lct_code)){
-            myRefl.addValueEventListener(new ValueEventListener() {
+          for(int i=0; i<Sub_arr.length-1;i++)
+          {
+              if (Lecture_activity.strName.equals(Sub_arr[i]))
+              {
+
+                  myRefl.child("GroupOne").child("Subjects").child(Sub_arr[i]).child("Absance").push().setValue(Student_Iformation.stName);
+                  Toast.makeText(this, "Absance tacked", Toast.LENGTH_SHORT).show();
+              }
+          }
+         /*   myRefl.addValueEventListener(new ValueEventListener() {
               @Override
               public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                   StudentModuel g=new StudentModuel();
 
                   gerges=dataSnapshot.child("GroupOne").child("Students").child(g.getId()).child("name").getValue().toString();
-                 bbbb.setText(gerges);
+                 bbbb.setText(gerges);*
               }
 
               @Override
               public void onCancelled(@NonNull DatabaseError databaseError) {
 
               }
-          });
+          });*/
 
 
-            myRefl.child("GroupOne").child("Subjects").child("Java").child("Absance").push().setValue(Student_Iformation.stName);
-            Toast.makeText(this, "Absance tacked", Toast.LENGTH_SHORT).show();
             
         } }
 }
