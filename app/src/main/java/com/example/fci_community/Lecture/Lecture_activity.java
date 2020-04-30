@@ -14,6 +14,7 @@ import com.example.fci_community.R;
 public class Lecture_activity extends AppCompatActivity implements View.OnClickListener {
 
     Button buttonAbsence,buttonAssign;
+    TextView txtItem;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,6 +26,10 @@ public class Lecture_activity extends AppCompatActivity implements View.OnClickL
         buttonAssign=(Button) findViewById(R.id.btn_Assign);
         buttonAbsence.setOnClickListener(this);
         buttonAssign.setOnClickListener(this);
+        txtItem=(TextView)findViewById(R.id.item_name);
+
+        String strName=getIntent().getExtras().getString("name");
+        txtItem.setText(strName);
 
     }
 

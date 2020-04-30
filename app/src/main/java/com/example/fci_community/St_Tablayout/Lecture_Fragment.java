@@ -11,10 +11,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
 import com.example.fci_community.Lecture.Lecture_activity;
+import com.example.fci_community.Lecture.St_Absence;
 import com.example.fci_community.R;
 
 /**
@@ -24,8 +26,6 @@ public class Lecture_Fragment extends Fragment implements AdapterView.OnItemClic
 
     ListView listLecture;
     String[]subject={"IT","CS","IS"};
-
-
     public Lecture_Fragment() {
         // Required empty public constructor
     }
@@ -48,7 +48,14 @@ public class Lecture_Fragment extends Fragment implements AdapterView.OnItemClic
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+       // int itemPosition=position;
+       String itemValue=(String) listLecture.getItemAtPosition(position);
+        Toast.makeText(getActivity(),""+itemValue,Toast.LENGTH_SHORT).show();
+       // Lecture_activity.txtItem.setText(itemValue);
+
         Intent intent=new Intent(getActivity(),Lecture_activity.class);
+        intent.putExtra("name",itemValue);
+
         startActivity(intent);
 
     }
