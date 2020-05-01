@@ -25,8 +25,9 @@ public class St_Absence extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRefl = database.getReference("Groups");
     TextView bbbb;
-    private String []Sub_arr={"CS","IT","IS"};
+    private String []Sub_arr={"CS","IS","IT"};
     private String gerges;
+    private String firebasecode;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class St_Absence extends AppCompatActivity {
         st_code=(EditText)findViewById(R.id.student_code);
         bbbb=(TextView) findViewById(R.id.xxxx);
 
+       // getFirebadeCode();
     }
     public void st_starlecture(View view) {
         String b=st_code.getText().toString();
@@ -67,4 +69,26 @@ public class St_Absence extends AppCompatActivity {
 
             
         } }
+
+        private void getFirebadeCode()
+        {
+            myRefl.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for (int i=0; i<Sub_arr.length-1;i++)
+                    {
+                        if(Lecture_activity.strName.equals(Sub_arr[i]))
+                        {
+                            firebasecode=dataSnapshot.child("GroupOne").child("Subjects").child(Sub_arr[i]).child("code").getValue().toString();
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
 }

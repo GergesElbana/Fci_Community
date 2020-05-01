@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Dr_Absence extends AppCompatActivity {
     public static  String lct_code;
     private EditText doctor_code;
-    private String[] array_sub={"CD","IS","IT"};
+    private String[] array_sub={"CS","IS","IT"};
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
    private DatabaseReference myRefl = database.getReference("Groups");
     @Override
