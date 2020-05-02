@@ -21,8 +21,8 @@ import com.example.fci_community.R;
 public class dr_Lecture extends Fragment implements View.OnClickListener {
    private   Button btn_1,btn_2,btn_3,btn_4;
    private String[]subjecto={"IT","CS","IS","ggggg","naaa"};
- private    ListView lectureListView;
-    private Object Activity_Dr_Lecture_List;
+
+
     public static String Nahola;
     public dr_Lecture() {
     }
@@ -43,7 +43,7 @@ public class dr_Lecture extends Fragment implements View.OnClickListener {
         btn_4.setOnClickListener(this);
         return v;
     }
- Activity_Dr_Lecture_List f=new Activity_Dr_Lecture_List();
+ //Activity_Dr_Lecture_List f=new Activity_Dr_Lecture_List();
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -51,21 +51,25 @@ public class dr_Lecture extends Fragment implements View.OnClickListener {
                 Nahola="GroupOne";
                 Intent intent=new Intent(getActivity(), Activity_Dr_Lecture_List.class);
                 startActivity(intent);
+               Activity_Dr_Lecture_List.subject= new String[]{"Cs", "IT","IS","JAVA","C++"};
                 break;
             case R.id.button2:
                  Nahola="GroupTwo";
                 Intent nt=new Intent(getActivity(), Activity_Dr_Lecture_List.class);
                 startActivity(nt);
-
+                Activity_Dr_Lecture_List.subject= new String[]{"KOTLIN", "PYTHON","MATH","LOGIC"};
                 break;
             case R.id.button3:
                Nahola="GroupThree";
                 Intent nnt=new Intent(getActivity(), Activity_Dr_Lecture_List.class);
                 startActivity(nnt);
+                Activity_Dr_Lecture_List.subject= new String[]{"PHP", "BIO","PHIISICS"};
                 break;
             case R.id.button4:
              Nahola="GroupFour";
+                Activity_Dr_Lecture_List.subject= new String[]{"PHP", "BIO","PHIISICS","C#"};
                 Intent not=new Intent(getActivity(), Activity_Dr_Lecture_List.class);
+
                 startActivity(not);
                 break;
 

@@ -35,9 +35,9 @@ public class Dr_Absence extends AppCompatActivity {
     public void OpenNewLecture(View view) {
         lct_code = doctor_code.getText().toString();
         for (int i = 0; i < array_sub.length - 1; i++) {
-            if (ManageLectureActivity.Dr_itemName.equals(array_sub[i])) {
+            if (ManageLectureActivity.Dr_itemName.equals(Activity_Dr_Lecture_List.subject[i])) {
 
-                myRefl.child(dr_Lecture.Nahola).child("Subjects").child(array_sub[i]).child("Code").setValue(lct_code);
+                myRefl.child(dr_Lecture.Nahola).child("Subjects").child(ManageLectureActivity.Dr_itemName).child("Code").setValue(lct_code);
                 Toast.makeText(this, "Absance tacked", Toast.LENGTH_SHORT).show();
             }
 

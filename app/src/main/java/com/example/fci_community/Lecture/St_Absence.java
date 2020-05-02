@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.fci_community.Dr_Lecture.Dr_Absence;
 import com.example.fci_community.Firebase.StudentModuel;
 import com.example.fci_community.R;
+import com.example.fci_community.St_Tablayout.Lecture_Fragment;
 import com.example.fci_community.Student_Iformation;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -47,10 +48,10 @@ public class St_Absence extends AppCompatActivity {
       if (b.equals(firebasecode)){
           for(int i=0; i<Sub_arr.length-1;i++)
           {
-              if (Lecture_activity.strName.equals(Sub_arr[i]))
+              if (Lecture_activity.strName.equals(Lecture_Fragment.st_subject))
               {
 
-                  myRefl.child(Student_Iformation.te_Group).child("Subjects").child(Sub_arr[i]).child("Absance").push().setValue(Student_Iformation.stName);
+                  myRefl.child(Student_Iformation.te_Group).child("Subjects").child(Lecture_activity.strName).child("Absance").push().setValue(Student_Iformation.stName);
                   Toast.makeText(this, "Absance tacked", Toast.LENGTH_SHORT).show();
               }
 

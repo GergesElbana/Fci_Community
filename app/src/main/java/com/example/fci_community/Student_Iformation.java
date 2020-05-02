@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fci_community.Firebase.StudentModuel;
+import com.example.fci_community.St_Tablayout.Lecture_Fragment;
 import com.example.fci_community.St_Tablayout.St_mainactivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -29,6 +30,7 @@ public class Student_Iformation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student__iformation);
+        getSupportActionBar().hide();
         compinitial();
         Radio();
 
@@ -79,21 +81,26 @@ public class Student_Iformation extends AppCompatActivity {
 
                 if (checkedId == R.id.group_one) {
                     te_Group="GroupOne";
+                   Lecture_Fragment.st_subject=new String[]{"Cs", "IT","IS","JAVA","C++"};
                 }
 
                 else if(checkedId==R.id.group_two)
                 {
                     te_Group="GroupTwo";
+                    Lecture_Fragment.st_subject= new String[]{"KOTLIN", "PYTHON","MATH","LOGIC"};
                 }
 
                 else if (checkedId==R.id.group_three)
                 {
                     te_Group="GroupThree";
+                    Lecture_Fragment.st_subject=new String[]{"PHP", "BIO","PHIISICS"};
                 }
 
                 else if (checkedId==R.id.group_four)
                 {
+
                     te_Group="GroupFour";
+                    Lecture_Fragment.st_subject=new String[]{"PHP", "BIO","PHIISICS","C#"};
                 }
             }
         });

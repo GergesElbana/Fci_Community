@@ -25,7 +25,7 @@ import com.example.fci_community.R;
 public class Lecture_Fragment extends Fragment implements AdapterView.OnItemClickListener {
 
     ListView listLecture;
-    String[]subject={"IT","CS","IS"};
+   public static String[]st_subject={""};
     public Lecture_Fragment() {
         // Required empty public constructor
     }
@@ -34,11 +34,12 @@ public class Lecture_Fragment extends Fragment implements AdapterView.OnItemClic
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View v=inflater.inflate(R.layout.fragment_lecture_, container, false);
 
 
         listLecture=(ListView)v.findViewById(R.id.list_Lecture);
-        ArrayAdapter<String>adapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,subject);
+        ArrayAdapter<String>adapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,st_subject);
         listLecture.setAdapter(adapter);
 
         listLecture.setOnItemClickListener(this);

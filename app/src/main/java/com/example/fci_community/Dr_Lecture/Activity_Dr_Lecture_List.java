@@ -14,7 +14,8 @@ import com.example.fci_community.Dr_Tablayout.ManageLectureActivity;
 import com.example.fci_community.R;
 
 public class Activity_Dr_Lecture_List extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    String[]subject={"IT","CS","IS"};
+    //public static String[]subject={"IT","CS","IS"};
+    public static String[]subject={""};
     ListView lectureListView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class Activity_Dr_Lecture_List extends AppCompatActivity implements Adapt
         getSupportActionBar().hide();
 
         lectureListView=(ListView)findViewById(R.id.dr_lecturelistview);
-        ArrayAdapter<String > adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,subject);
+        ArrayAdapter<String > adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, subject);
         lectureListView.setAdapter(adapter);
         lectureListView.setOnItemClickListener(this);
     }
