@@ -23,7 +23,7 @@ public class dr_Lecture extends Fragment implements View.OnClickListener {
    private String[]subjecto={"IT","CS","IS","ggggg","naaa"};
  private    ListView lectureListView;
     private Object Activity_Dr_Lecture_List;
-
+    public static String Nahola;
     public dr_Lecture() {
     }
 
@@ -39,7 +39,8 @@ public class dr_Lecture extends Fragment implements View.OnClickListener {
 
         btn_1.setOnClickListener(this);
         btn_2.setOnClickListener(this);
-
+        btn_3.setOnClickListener(this);
+        btn_4.setOnClickListener(this);
         return v;
     }
  Activity_Dr_Lecture_List f=new Activity_Dr_Lecture_List();
@@ -47,23 +48,25 @@ public class dr_Lecture extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button1:
+                Nahola="GroupOne";
                 Intent intent=new Intent(getActivity(), Activity_Dr_Lecture_List.class);
                 startActivity(intent);
                 break;
             case R.id.button2:
-
-                lectureListView=(ListView)v.findViewById(R.id.dr_lecturelistview);
-                ArrayAdapter<String > adapter=new ArrayAdapter<String>(f,android.R.layout.simple_list_item_1,subjecto);
-                lectureListView.setAdapter(adapter);
+                 Nahola="GroupTwo";
                 Intent nt=new Intent(getActivity(), Activity_Dr_Lecture_List.class);
                 startActivity(nt);
 
                 break;
             case R.id.button3:
-
+               Nahola="GroupThree";
+                Intent nnt=new Intent(getActivity(), Activity_Dr_Lecture_List.class);
+                startActivity(nnt);
                 break;
             case R.id.button4:
-
+             Nahola="GroupFour";
+                Intent not=new Intent(getActivity(), Activity_Dr_Lecture_List.class);
+                startActivity(not);
                 break;
 
 

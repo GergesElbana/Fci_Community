@@ -20,7 +20,7 @@ public class Student_Iformation extends AppCompatActivity {
     public static StudentModuel stm;
     public static String stName, te_Group;
 
-  // public static String stid,stMail,stPas;
+
     RadioGroup groups;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();

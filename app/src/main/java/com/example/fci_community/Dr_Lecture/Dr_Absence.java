@@ -8,7 +8,9 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.fci_community.Dr_Tablayout.Doctor_activity;
 import com.example.fci_community.Dr_Tablayout.ManageLectureActivity;
+import com.example.fci_community.Dr_Tablayout.dr_Lecture;
 import com.example.fci_community.Lecture.Lecture_activity;
 import com.example.fci_community.R;
 import com.example.fci_community.Student_Iformation;
@@ -35,7 +37,7 @@ public class Dr_Absence extends AppCompatActivity {
         for (int i = 0; i < array_sub.length - 1; i++) {
             if (ManageLectureActivity.Dr_itemName.equals(array_sub[i])) {
 
-                myRefl.child("GroupOne").child("Subjects").child(array_sub[i]).child("Code").setValue(lct_code);
+                myRefl.child(dr_Lecture.Nahola).child("Subjects").child(array_sub[i]).child("Code").setValue(lct_code);
                 Toast.makeText(this, "Absance tacked", Toast.LENGTH_SHORT).show();
             }
 

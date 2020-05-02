@@ -1,6 +1,7 @@
 package com.example.fci_community.Lecture;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -26,8 +27,8 @@ public class St_Absence extends AppCompatActivity {
     DatabaseReference myRefl = database.getReference("Groups");
     TextView bbbb;
     private String []Sub_arr={"CS","IS","IT"};
-    private String gerges;
     private String firebasecode;
+    private  String  v;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,51 +38,43 @@ public class St_Absence extends AppCompatActivity {
         st_code=(EditText)findViewById(R.id.student_code);
         bbbb=(TextView) findViewById(R.id.xxxx);
 
-       // getFirebadeCode();
+
+
     }
     public void st_starlecture(View view) {
+        getFirebadeCode();
         String b=st_code.getText().toString();
-      if (b.equals(Dr_Absence.lct_code)){
+      if (b.equals(firebasecode)){
           for(int i=0; i<Sub_arr.length-1;i++)
           {
               if (Lecture_activity.strName.equals(Sub_arr[i]))
               {
 
-                  myRefl.child("GroupOne").child("Subjects").child(Sub_arr[i]).child("Absance").push().setValue(Student_Iformation.stName);
+                  myRefl.child(Student_Iformation.te_Group).child("Subjects").child(Sub_arr[i]).child("Absance").push().setValue(Student_Iformation.stName);
                   Toast.makeText(this, "Absance tacked", Toast.LENGTH_SHORT).show();
               }
+
           }
-         /*   myRefl.addValueEventListener(new ValueEventListener() {
-              @Override
-              public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                  StudentModuel g=new StudentModuel();
-
-                  gerges=dataSnapshot.child("GroupOne").child("Students").child(g.getId()).child("name").getValue().toString();
-                 bbbb.setText(gerges);*
-              }
-
-              @Override
-              public void onCancelled(@NonNull DatabaseError databaseError) {
-
-              }
-          });*/
 
 
-            
+
+
         } }
 
         private void getFirebadeCode()
         {
-            myRefl.addValueEventListener(new ValueEventListener() {
+
+
+            myRefl.child(Student_Iformation.te_Group).child("Subjects").child(Lecture_activity.strName).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    for (int i=0; i<Sub_arr.length-1;i++)
-                    {
-                        if(Lecture_activity.strName.equals(Sub_arr[i]))
-                        {
-                            firebasecode=dataSnapshot.child("GroupOne").child("Subjects").child(Sub_arr[i]).child("code").getValue().toString();
-                        }
-                    }
+
+                   for (DataSnapshot snap: dataSnapshot.getChildren()){
+
+                       firebasecode=snap.getValue().toString();
+
+                   }
+                    Log.v("Naala",firebasecode);
 
                 }
 
