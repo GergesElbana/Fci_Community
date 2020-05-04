@@ -46,9 +46,9 @@ public class St_Absence extends AppCompatActivity {
         getFirebadeCode();
         String b=st_code.getText().toString();
       if (b.equals(firebasecode)){
-          for(int i=0; i<Sub_arr.length-1;i++)
+          for(int i=0; i<Lecture_Fragment.st_subject.length-1;i++)
           {
-              if (Lecture_activity.strName.equals(Lecture_Fragment.st_subject))
+              if (Lecture_activity.strName.equals(Lecture_Fragment.st_subject[i]))
               {
 
                   myRefl.child(Student_Iformation.te_Group).child("Subjects").child(Lecture_activity.strName).child("Absance").push().setValue(Student_Iformation.stName);

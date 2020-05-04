@@ -34,7 +34,7 @@ public class Dr_Absence extends AppCompatActivity {
 
     public void OpenNewLecture(View view) {
         lct_code = doctor_code.getText().toString();
-        for (int i = 0; i < array_sub.length - 1; i++) {
+        for (int i = 0; i < Activity_Dr_Lecture_List.subject.length - 1; i++) {
             if (ManageLectureActivity.Dr_itemName.equals(Activity_Dr_Lecture_List.subject[i])) {
 
                 myRefl.child(dr_Lecture.Nahola).child("Subjects").child(ManageLectureActivity.Dr_itemName).child("Code").setValue(lct_code);
