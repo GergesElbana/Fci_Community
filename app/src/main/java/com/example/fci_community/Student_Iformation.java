@@ -22,9 +22,9 @@ public class Student_Iformation extends AppCompatActivity {
     public static String stName, te_Group;
 
 
-    RadioGroup groups;
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference();
+   private   RadioGroup groups;
+   private FirebaseDatabase database = FirebaseDatabase.getInstance();
+   private  DatabaseReference myRef = database.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

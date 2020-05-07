@@ -23,6 +23,7 @@ public class Dr_Absence extends AppCompatActivity {
     private String[] array_sub={"CS","IS","IT"};
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
    private DatabaseReference myRefl = database.getReference("Groups");
+    private DatabaseReference myRef2 = database.getReference("Groups");
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,13 +33,22 @@ public class Dr_Absence extends AppCompatActivity {
 
     }
 
+
+
     public void OpenNewLecture(View view) {
+
+
+        myRef2.child(dr_Lecture.Nahola).child("Subjects").
+                child(ManageLectureActivity.Dr_itemName).child("Absance").removeValue();
+
+
         lct_code = doctor_code.getText().toString();
         for (int i = 0; i < Activity_Dr_Lecture_List.subject.length - 1; i++) {
             if (ManageLectureActivity.Dr_itemName.equals(Activity_Dr_Lecture_List.subject[i])) {
 
                 myRefl.child(dr_Lecture.Nahola).child("Subjects").child(ManageLectureActivity.Dr_itemName).child("Code").setValue(lct_code);
                 Toast.makeText(this, "Absance tacked", Toast.LENGTH_SHORT).show();
+
             }
 
         }

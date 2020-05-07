@@ -24,9 +24,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class St_Absence extends AppCompatActivity {
     private EditText st_code;
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRefl = database.getReference("Groups");
-    TextView bbbb;
+  private  FirebaseDatabase database = FirebaseDatabase.getInstance();
+  private  DatabaseReference myRefl = database.getReference("Groups");
+
     private String []Sub_arr={"CS","IS","IT"};
     private String firebasecode;
     private  String  v;
@@ -37,7 +37,6 @@ public class St_Absence extends AppCompatActivity {
         setContentView(R.layout.st_absence);
         getSupportActionBar().hide();
         st_code=(EditText)findViewById(R.id.student_code);
-        bbbb=(TextView) findViewById(R.id.xxxx);
 
 
 

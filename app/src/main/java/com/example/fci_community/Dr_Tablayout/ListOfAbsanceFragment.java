@@ -39,6 +39,7 @@ public class ListOfAbsanceFragment extends Fragment {
     ListView AbsenceList;
     FirebaseDatabase fireData = FirebaseDatabase.getInstance();
     DatabaseReference dataAbs = fireData.getReference("Groups");
+    String array;
 
     public ListOfAbsanceFragment() {
         // Required empty public constructor
@@ -70,7 +71,7 @@ public class ListOfAbsanceFragment extends Fragment {
               //  s=dr_Lecture.Nahola;
                 for (DataSnapshot snap: dataSnapshot.getChildren()) {
 
-                    String array = snap.getValue().toString();
+                     array = snap.getValue().toString();
                     arrayListAbs.add(array);
                     adapter.notifyDataSetChanged();
                     Log.v("nahl", array);
@@ -86,6 +87,7 @@ public class ListOfAbsanceFragment extends Fragment {
             @Override
             public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
 
+
             }
 
             @Override
@@ -100,4 +102,7 @@ public class ListOfAbsanceFragment extends Fragment {
         });
 
     }
+
+
+
 }

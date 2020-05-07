@@ -31,12 +31,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/txt_qustion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="50dp"
-            android:text="aaaa bbbbbb njjiojk"
+
             android:textColor="#000"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +71,6 @@
             android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_18sdp"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:text="fnmm"
             android:textSize="15sp"
             android:textColor="#000" />
 
@@ -103,7 +103,7 @@
             android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_18sdp"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:text="fnmm"
+
             android:textSize="15sp"
             android:textColor="#000" />
 
@@ -135,7 +135,7 @@
             android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_18sdp"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:text="fnmm"
+
             android:textSize="15sp"
             android:textColor="#000" />
 
@@ -168,7 +168,6 @@
             android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_18sdp"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:text="fnmm"
             android:textSize="15sp"
             android:textColor="#000" />
     </androidx.cardview.widget.CardView>
@@ -187,6 +186,7 @@
         android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="RecivingQustion"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
