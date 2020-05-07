@@ -64,18 +64,17 @@ public class ListOfAbsanceFragment extends Fragment {
 
     public void data() {
 
-        dataAbs.child(dr_Lecture.Nahola).child("Subjects").child(ManageLectureActivity.Dr_itemName).addChildEventListener(new ChildEventListener() {
+        dataAbs.child(dr_Lecture.Nahola).child("Subjects").child(ManageLectureActivity.Dr_itemName)
+                .child("Absance").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
               //  s=dr_Lecture.Nahola;
-                for (DataSnapshot snap: dataSnapshot.getChildren()) {
 
-                     array = snap.getValue().toString();
+                     array = dataSnapshot.getValue().toString();
                     arrayListAbs.add(array);
                     adapter.notifyDataSetChanged();
                     Log.v("nahl", array);
-                }
 
             }
 

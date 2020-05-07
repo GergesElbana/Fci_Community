@@ -27,44 +27,48 @@ import java.util.ArrayList;
  */
 public class ListofAssignmentFragment extends Fragment {
 
+    FirebaseDatabase fireData1 = FirebaseDatabase.getInstance();
+   DatabaseReference dataAbssign = fireData1.getReference("Groups");
+    private ListView listViewAssign;
+   private ArrayAdapter<String>arrayAdapter;
+   private ArrayList<String>arrayListAssign;
+   private String arrayName;
+
 
     public ListofAssignmentFragment() {
         /// Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_listof_assignment, container, false);
-       /* ListofAssignment=(ListView)v.findViewById(R.id.ListofAssiment);
-        data();
-        arrayListAssign = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayListAssign);
-        ListofAssignment.setAdapter(adapter);*/
 
+        dataListAssign();
 
+        listViewAssign=(ListView)v.findViewById(R.id.ListofAssiment);
+        arrayListAssign=new ArrayList<>();
+
+        arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayListAssign);
+        listViewAssign.setAdapter(arrayAdapter);
 
         return v;
     }
 
+    private void dataListAssign()
+    {
 
-  /*  public void data() {
-
-        dataAbs.child(dr_Lecture.Nahola).child("Subjects").child(ManageLectureActivity.Dr_itemName).child("Assignment")
-                .child("Name")
-                .addChildEventListener(new ChildEventListener() {
+        dataAbssign.child(dr_Lecture.Nahola).child("Subjects").child(ManageLectureActivity.Dr_itemName)
+                .child("Assignment").child("Name").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-                //  s=dr_Lecture.Nahola;
-                for (DataSnapshot snap: dataSnapshot.getChildren()) {
 
-                    array = snap.getValue().toString();
-                    arrayListAssign.add(array);
-                    adapter.notifyDataSetChanged();
-                    Log.v("nahl", array);
-                }
+                    arrayName = dataSnapshot.getValue().toString();
+                    arrayListAssign.add(arrayName);
+                    arrayAdapter.notifyDataSetChanged();
+                    Log.v("naaa", arrayName);
+
 
             }
 
@@ -75,7 +79,6 @@ public class ListofAssignmentFragment extends Fragment {
 
             @Override
             public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
 
             }
 
@@ -90,9 +93,5 @@ public class ListofAssignmentFragment extends Fragment {
             }
         });
 
-    }*/
-
-
-
-
+    }
 }
