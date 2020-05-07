@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Dr_Assinment extends AppCompatActivity {
     private EditText Ans_1,Ans_2,Ans_3,Ans_4,R_Ans,Qust;
     private String ans1,ans2,ans3,ans4,qus;
-    public static String Rans;
+    private String Rans;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference myRef = database.getReference("Groups");
 

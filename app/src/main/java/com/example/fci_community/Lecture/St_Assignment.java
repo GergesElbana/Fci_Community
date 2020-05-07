@@ -24,10 +24,12 @@ import com.google.firebase.database.ValueEventListener;
 public class St_Assignment extends AppCompatActivity implements View.OnClickListener {
   private TextView Qust,Ans_1,Ans_2,Ans_3,Ans_4;
   private AssignmentModuel Asm;
+  private String Rans;
 
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference myRefl = database.getReference("Groups");
+    private DatabaseReference myRef2 = database.getReference("Groups");
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,23 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
         Ans_2.setOnClickListener(this);
         Ans_3.setOnClickListener(this);
         Ans_4.setOnClickListener(this);
+      //  Log.v("gerges",Rans);
 
+        myRef2.child(Student_Iformation.te_Group).child("Subjects").child(Lecture_activity.strName)
+                .child("Assignment").child("1").child("r_Ans").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                Rans=dataSnapshot.getValue().toString();
+                Log.v("Na7ola",Rans);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
     }
@@ -61,20 +79,23 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
                 .child("Assignment").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot snap:dataSnapshot.getChildren()) {
-                    Asm = snap.getValue(AssignmentModuel.class);
 
+                for (DataSnapshot snap:dataSnapshot.getChildren()) {
+
+                    Asm = snap.getValue(AssignmentModuel.class);
                     Qust.setText(Asm.getQus());
                     Ans_1.setText(Asm.getAns_1());
                     Ans_2.setText(Asm.getAns_2());
                     Ans_3.setText(Asm.getAns_3());
                     Ans_4.setText(Asm.getAns_4());
-                    Log.v("Na7ola",snap.toString());
+                    //Rans=Asm.getR_Ans();
+
 
 
                 }
 
-
+             // Rans=dataSnapshot.child("1").getValue().toString();
+                Log.v("Na7ola",Rans);
             }
 
             @Override
@@ -98,43 +119,54 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
         String b=Ans_2.getText().toString();
         String c=Ans_3.getText().toString();
         String d=Ans_2.getText().toString();
-        if(v==Ans_1){
 
-            if (A.equals(Dr_Assinment.Rans)){
+      if(v.getId()==R.id.answer_1){
+
+        //  Toast.makeText(this, "gggg", Toast.LENGTH_SHORT).show();
+
+            if (A.equals(Rans)){
                 myRefl.child(Student_Iformation.te_Group).child("Subjects")
                         .child(Lecture_activity.strName).child("Assignment")
                         .child("Name").push().setValue(Student_Iformation.stName);
-                Toast.makeText(this, "gggg", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
+                finish();
+
 
 
             }
         }
-      else  if(v==Ans_2){
-
-            if (b.equals(Dr_Assinment.Rans)){
+      else  if(v.getId()==R.id.answer_2){
+       //   Toast.makeText(this, "gggg", Toast.LENGTH_SHORT).show();
+            if (b.equals(Rans)){
                 myRefl.child(Student_Iformation.te_Group).child("Subjects")
                         .child(Lecture_activity.strName).child("Assignment")
                         .child("Name").push().setValue(Student_Iformation.stName);
-                Toast.makeText(this, "gggg", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
+                finish();
             }
         }
-     else   if(v==Ans_3){
+     else   if(v.getId()==R.id.answer_3){
 
-            if (c.equals(Dr_Assinment.Rans)){
+            if (c.equals(Rans)){
                 myRefl.child(Student_Iformation.te_Group).child("Subjects")
                         .child(Lecture_activity.strName).child("Assignment")
                         .child("Name").push().setValue(Student_Iformation.stName);
+                Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
+                finish();
 
             }
         }
-     else   if(v==Ans_4){
-
-            if (d.equals(Dr_Assinment.Rans)){
+     else   if(v.getId()==R.id.answer_4){
+          //  Toast.makeText(this, "gggg", Toast.LENGTH_SHORT).show();
+            if (d.equals(Rans)){
                 myRefl.child(Student_Iformation.te_Group).child("Subjects")
                         .child(Lecture_activity.strName).child("Assignment")
                         .child("Name").push().setValue(Student_Iformation.stName);
-                Toast.makeText(this, "gggg", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
+                finish();
+
             }
+
         }
     }
 }

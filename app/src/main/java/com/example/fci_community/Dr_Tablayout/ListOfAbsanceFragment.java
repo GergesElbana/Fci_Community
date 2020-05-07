@@ -34,12 +34,12 @@ import java.util.ArrayList;
  */
 public class ListOfAbsanceFragment extends Fragment {
 
-    ArrayAdapter<String> adapter;
-    ArrayList<String> arrayListAbs;
-    ListView AbsenceList;
-    FirebaseDatabase fireData = FirebaseDatabase.getInstance();
-    DatabaseReference dataAbs = fireData.getReference("Groups");
-    String array;
+ private    ArrayAdapter<String> adapter;
+  private   ArrayList<String> arrayListAbs;
+   private ListView AbsenceList;
+   private FirebaseDatabase fireData = FirebaseDatabase.getInstance();
+  private   DatabaseReference dataAbs = fireData.getReference("Groups");
+ private    String array;
 
     public ListOfAbsanceFragment() {
         // Required empty public constructor
