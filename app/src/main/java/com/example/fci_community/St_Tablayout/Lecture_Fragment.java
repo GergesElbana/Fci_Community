@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.fci_community.Lecture.Lecture_activity;
 import com.example.fci_community.Lecture.St_Absence;
+import com.example.fci_community.Lecture.St_MangerLectureActivity;
 import com.example.fci_community.R;
 
 /**
@@ -54,7 +55,7 @@ public class Lecture_Fragment extends Fragment implements AdapterView.OnItemClic
         Toast.makeText(getActivity(),""+itemValue,Toast.LENGTH_SHORT).show();
        // Lecture_activity.txtItem.setText(itemValue);
 
-        Intent intent=new Intent(getActivity(),Lecture_activity.class);
+        Intent intent=new Intent(getActivity(), St_MangerLectureActivity.class);
         intent.putExtra("name",itemValue);
 
         startActivity(intent);

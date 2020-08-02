@@ -44,7 +44,7 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
         Ans_4.setOnClickListener(this);
       //  Log.v("gerges",Rans);
 
-        myRef2.child(Student_Iformation.te_Group).child("Subjects").child(Lecture_activity.strName)
+        myRef2.child(Student_Iformation.te_Group).child("Subjects").child(St_MangerLectureActivity.strName)
                 .child("Assignment").child("1").child("r_Ans").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -75,7 +75,7 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
 
     private void GetQustion(){
 
-        myRefl.child(Student_Iformation.te_Group).child("Subjects").child(Lecture_activity.strName)
+        myRefl.child(Student_Iformation.te_Group).child("Subjects").child(St_MangerLectureActivity.strName)
                 .child("Assignment").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -126,7 +126,7 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
 
             if (A.equals(Rans)){
                 myRefl.child(Student_Iformation.te_Group).child("Subjects")
-                        .child(Lecture_activity.strName).child("Assignment")
+                        .child(St_MangerLectureActivity.strName).child("Assignment")
                         .child("Name").push().setValue(Student_Iformation.stName);
                 Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
                 finish();
@@ -139,7 +139,7 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
        //   Toast.makeText(this, "gggg", Toast.LENGTH_SHORT).show();
             if (b.equals(Rans)){
                 myRefl.child(Student_Iformation.te_Group).child("Subjects")
-                        .child(Lecture_activity.strName).child("Assignment")
+                        .child(St_MangerLectureActivity.strName).child("Assignment")
                         .child("Name").push().setValue(Student_Iformation.stName);
                 Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
                 finish();
@@ -149,7 +149,7 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
 
             if (c.equals(Rans)){
                 myRefl.child(Student_Iformation.te_Group).child("Subjects")
-                        .child(Lecture_activity.strName).child("Assignment")
+                        .child(St_MangerLectureActivity.strName).child("Assignment")
                         .child("Name").push().setValue(Student_Iformation.stName);
                 Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
                 finish();
@@ -160,7 +160,7 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
           //  Toast.makeText(this, "gggg", Toast.LENGTH_SHORT).show();
             if (d.equals(Rans)){
                 myRefl.child(Student_Iformation.te_Group).child("Subjects")
-                        .child(Lecture_activity.strName).child("Assignment")
+                        .child(St_MangerLectureActivity.strName).child("Assignment")
                         .child("Name").push().setValue(Student_Iformation.stName);
                 Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
                 finish();

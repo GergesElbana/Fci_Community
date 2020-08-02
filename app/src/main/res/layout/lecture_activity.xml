@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,21 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/item_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="85dp"
-        android:text="itemName"
-        android:textColor="#000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/xxxx"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -36,14 +21,14 @@
         android:layout_marginRight="90dp"
         android:layout_marginBottom="396dp"
         android:background="@drawable/button_color"
+        android:text="Absence"
+        android:textColor="#fff"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Absence"
-        android:textSize="20sp"
-        android:textColor="#fff">
+        app:layout_constraintTop_toTopOf="parent">
 
     </Button>
 
@@ -59,14 +44,13 @@
         android:layout_marginRight="90dp"
         android:layout_marginBottom="212dp"
         android:background="@drawable/button_color"
+        android:text="Assignment"
+        android:textColor="#fff"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Assignment"
-        android:textSize="20sp"
-        android:textColor="#fff">
-    </Button>
+        app:layout_constraintTop_toTopOf="parent"></Button>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

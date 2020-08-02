@@ -36,6 +36,7 @@ public class ManageLectureActivity extends AppCompatActivity {
         adaptera.addFragment(new StartLctureFragment() );
         adaptera.addFragment(new ListOfAbsanceFragment());
         adaptera.addFragment(new ListofAssignmentFragment());
+        adaptera.addFragment(new DoctorPostFragment());
 
 
 
@@ -49,6 +50,7 @@ public class ManageLectureActivity extends AppCompatActivity {
         dr_tp.getTabAt(0).setText("Start");
         dr_tp.getTabAt(1).setText("Absance");
         dr_tp.getTabAt(2).setText("Assignment");
+        dr_tp.getTabAt(3).setText("Posts");
 
     }
 
