@@ -16,7 +16,7 @@ import com.example.fci_community.R;
 
 public class Lecture_activity extends Fragment implements View.OnClickListener {
 
-    Button buttonAbsence,buttonAssign;
+    TextView buttonAbsence,buttonAssign;
 
 
 
@@ -25,8 +25,8 @@ public class Lecture_activity extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.lecture_activity, container, false);
 
-        buttonAbsence=(Button) v.findViewById(R.id.btn_Abs);
-        buttonAssign=(Button) v.findViewById(R.id.btn_Assign);
+        buttonAbsence=(TextView) v.findViewById(R.id.btn_Abs);
+        buttonAssign=(TextView) v.findViewById(R.id.btn_Assign);
         buttonAbsence.setOnClickListener(this);
         buttonAssign.setOnClickListener(this);
 
