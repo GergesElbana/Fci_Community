@@ -130,9 +130,11 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
                         .child("Name").push().setValue(Student_Iformation.stName);
                 Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
                 finish();
+            }
 
-
-
+            else if (A=="")
+            {
+                Toast.makeText(this,"Empty",Toast.LENGTH_SHORT).show();
             }
         }
       else  if(v.getId()==R.id.answer_2){
@@ -143,6 +145,10 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
                         .child("Name").push().setValue(Student_Iformation.stName);
                 Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
                 finish();
+            }
+            else if ( b=="")
+            {
+                Toast.makeText(this,"Empty ",Toast.LENGTH_SHORT).show();
             }
         }
      else   if(v.getId()==R.id.answer_3){
@@ -155,6 +161,11 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
                 finish();
 
             }
+
+            else if (c=="" )
+            {
+                Toast.makeText(this,"Empty ",Toast.LENGTH_SHORT).show();
+            }
         }
      else   if(v.getId()==R.id.answer_4){
           //  Toast.makeText(this, "gggg", Toast.LENGTH_SHORT).show();
@@ -165,6 +176,11 @@ public class St_Assignment extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(this, "mmmmm", Toast.LENGTH_SHORT).show();
                 finish();
 
+            }
+
+            else if (d=="")
+            {
+                Toast.makeText(this,"Empty ",Toast.LENGTH_SHORT).show();
             }
 
         }

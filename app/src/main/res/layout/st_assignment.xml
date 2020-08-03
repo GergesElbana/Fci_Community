@@ -172,7 +172,7 @@
             android:textColor="#000" />
     </androidx.cardview.widget.CardView>
 
-    <Button
+  <!--  <Button
         android:id="@+id/btn_mark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -187,6 +187,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="RecivingQustion"/>
+        android:onClick="RecivingQustion"/> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
