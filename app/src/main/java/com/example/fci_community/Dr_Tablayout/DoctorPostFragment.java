@@ -18,6 +18,7 @@ import android.widget.Button;
 import com.example.fci_community.Adapters.DoctorRecyclerAdapter;
 import com.example.fci_community.Firebase.PostItems;
 import com.example.fci_community.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +33,7 @@ import java.util.List;
  */
 public class DoctorPostFragment extends Fragment {
 
-    private Button buttonAddPost;
+    private FloatingActionButton buttonAddPost;
     private RecyclerView doctorPostRecycler;
     private DoctorRecyclerAdapter doctorRecyclerAdapter;
     private List<PostItems> itemsList;

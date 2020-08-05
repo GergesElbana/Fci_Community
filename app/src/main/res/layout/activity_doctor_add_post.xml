@@ -24,29 +24,28 @@
     <ImageView
         android:scaleType="centerCrop"
         android:id="@+id/image_addPost"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/ic_launcher_background"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/camera_post_picture_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_sharePost"
+        app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edittext_addPost" />
 
     <Button
         android:id="@+id/btn_sharePost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:padding="@dimen/_15sdp"
         android:layout_marginStart="287dp"
         android:layout_marginLeft="287dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        android:text="share post"
+        android:background="@drawable/send_post"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_addPost" />
+        app:layout_constraintTop_toBottomOf="@+id/edittext_addPost" />
 </androidx.constraintlayout.widget.ConstraintLayout>

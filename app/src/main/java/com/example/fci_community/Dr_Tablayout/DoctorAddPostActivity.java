@@ -55,6 +55,7 @@ public class DoctorAddPostActivity extends AppCompatActivity {
 
         setupPost();
 
+       // imageViewPost=null;
         imageViewPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +69,12 @@ public class DoctorAddPostActivity extends AppCompatActivity {
         buttonSharPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!etWritPost.getText().toString().isEmpty() || imageViewPost !=null)
+              //  imageViewPost=null;
+                  if (etWritPost.getText().toString().isEmpty() || imageViewPost ==null)
+                {
+                    showMessage("Complete the post");
+                }
+               else if(!etWritPost.getText().toString().isEmpty() || imageViewPost !=null)
                 {
                     StorageReference storageReference = FirebaseStorage.getInstance().getReference("FCI_imagePost");
                     final StorageReference imagePath = storageReference.child(picturUri.getLastPathSegment());
@@ -96,6 +102,11 @@ public class DoctorAddPostActivity extends AppCompatActivity {
                         }
                     });
                 }
+
+              /*  else if (etWritPost.getText().toString().isEmpty() || imageViewPost ==null)
+                {
+                    showMessage("Complete the post");
+                }*/
             }
         });
     }
