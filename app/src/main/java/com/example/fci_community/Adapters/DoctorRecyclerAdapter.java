@@ -37,11 +37,22 @@ public class DoctorRecyclerAdapter extends RecyclerView.Adapter<DoctorRecyclerAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        //PostItems postItems=postItemsList.get(position);
+        final PostItems postItems=postItemsList.get(position);
 
         holder.textViewRecycler.setText(postItemsList.get(position).getPostText());
-        Glide.with(mContext).load(postItemsList.get(position).getPostPhoto()).into(holder.imageViewRecycler);
+        //Glide.with(mContext).load(postItemsList.get(position).getPostPhoto()).into(holder.imageViewRecycler);
         holder.textViewTime.setText(postItemsList.get(position).getFormattedTime());
+
+        if ((postItemsList.get(position).getPostPhoto()).equals(null))
+        {
+            holder.imageViewRecycler.setVisibility(View.GONE);
+        }
+        else if(!postItems.getPostPhoto().isEmpty())
+        {
+            holder.imageViewRecycler.setVisibility(View.VISIBLE);
+            Glide.with(mContext).load(postItems.getPostPhoto()).into(holder.imageViewRecycler);
+
+        }
 
     }
 

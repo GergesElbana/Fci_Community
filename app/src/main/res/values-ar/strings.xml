@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مجتمع_إف سي</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="write_post">اكتب بوست </string>
+    <string name="Enter_email">إدخل البريد الإكتروني</string>
+    <string name="Enter_password">إدخل كلمة المرور</string>
+    <string name="Login">دخول</string>
+    <string name="Enter_Name">إدخل الاسم</string>
+    <string name="Enter_Id">إدخل Id</string>
+    <string name="enter_data">إرسال البيانات</string>
+    <string name="Enter_Code">إدخل الكود :- </string>
+    <string name="Next">التالي</string>
+    <string name="End">إنهاء</string>
+    <string name="Question">السؤال</string>
+    <string name="enter_question">إدخل الإسائلة</string>
+    <string name="one_1">1-</string>
+    <string name="Answer_1">إدخل الإجابه 1</string>
+    <string name="tow_2">2-</string>
+    <string name="Answer_2">إدخل الإجابه 2</string>
+    <string name="three_3">3-</string>
+    <string name="Answer_3">إدخل الإجابه 3</string>
+    <string name="four_4">4-</string>
+    <string name="Answer_4">إدخل الإجابه 4</string>
+    <string name="five_5">5-</string>
+    <string name="RightAnswer">الإجابة الصحيحة</string>
+    <string name="Send">إرسال</string>
+    <string name="time">الوقت</string>
+    <string name="group_one">الفرقة الاولى</string>
+    <string name="group_tow">الفرقة الثانية </string>
+    <string name="group_three">الفرقة الثالثة</string>
+    <string name="group_four">الفرقة الرابعة</string>
+    <string name="Absence">الغياب</string>
+    <string name="Assignment">المهام</string>
+    <string name="Lecture">محاضرة</string>
+</resources>

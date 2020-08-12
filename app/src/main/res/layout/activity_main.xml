@@ -25,7 +25,8 @@
             android:layout_width="@dimen/_250sdp"
             android:layout_height="@dimen/_45sdp"
             android:layout_gravity="center"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:hint="@string/Enter_email"/>
 
         <EditText
             android:id="@+id/userpass"
@@ -33,7 +34,8 @@
             android:layout_height="@dimen/_45sdp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_20sdp"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:hint="@string/Enter_password"/>
 
         <Button
             android:id="@+id/loginBtn"
@@ -41,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_40sdp"
-            android:text="Login"
+            android:text="@string/Login"
             android:onClick="loginbuttonclicked"
             android:textAllCaps="false"
             />

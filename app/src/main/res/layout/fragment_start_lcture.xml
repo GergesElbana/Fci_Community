@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_35sdp"
-            android:text="Absance"
+            android:text="@string/Absence"
             android:textColor="#161212"
             android:textSize="28sp" />
     </LinearLayout>
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/_35sdp"
-            android:text="Assignment"
+            android:text="@string/Assignment"
             android:textColor="#161212"
             android:textSize="28sp"
             android:layout_marginLeft="@dimen/_5sdp"

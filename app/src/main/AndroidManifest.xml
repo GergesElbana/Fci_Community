@@ -12,27 +12,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Lecture.St_MangerLectureActivity"></activity>
-        <activity android:name=".Dr_Tablayout.DoctorAddPostActivity" />
-        <activity android:name=".Student_Iformation" />
-        <activity android:name=".Dr_Tablayout.ManageLectureActivity" />
-        <activity android:name=".St_Tablayout.St_mainactivity" />
-        <activity android:name=".Dr_LecterList" />
-        <activity android:name=".Dr_Lecture.Activity_Dr_Lecture_List" />
-        <activity android:name=".Dr_Lecture.Dr_Absence" />
-        <activity android:name=".Dr_Lecture.Dr_Assinment" />
-        <activity android:name=".Dr_Tablayout.Doctor_activity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Lecture.St_MangerLectureActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Dr_Tablayout.DoctorAddPostActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Student_Iformation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Dr_Tablayout.ManageLectureActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".St_Tablayout.St_mainactivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Dr_LecterList"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Dr_Lecture.Activity_Dr_Lecture_List"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Dr_Lecture.Dr_Absence"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Dr_Lecture.Dr_Assinment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Dr_Tablayout.Doctor_activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Lecture.Lecture_activity" />
-        <activity android:name=".Lecture.St_Absence" />
-        <activity android:name=".Lecture.St_Assignment" />
-        <activity android:name=".SplashActivity" />
+        <activity android:name=".Lecture.Lecture_activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Lecture.St_Absence"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Lecture.St_Assignment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

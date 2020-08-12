@@ -21,6 +21,7 @@ import com.example.fci_community.Firebase.PostItems;
 import com.example.fci_community.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -33,7 +34,7 @@ public class DoctorAddPostActivity extends AppCompatActivity {
 
     private EditText etWritPost;
     private ImageView imageViewPost;
-    private Button buttonSharPost;
+    private FloatingActionButton buttonSharPost;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private Uri picturUri;
@@ -49,7 +50,7 @@ public class DoctorAddPostActivity extends AppCompatActivity {
 
         etWritPost=(EditText)findViewById(R.id.edittext_addPost);
         imageViewPost=(ImageView)findViewById(R.id.image_addPost);
-        buttonSharPost=(Button)findViewById(R.id.btn_sharePost);
+        buttonSharPost=findViewById(R.id.btn_sharePost);
         firebaseDatabase=FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference("Groups");
 
@@ -65,16 +66,23 @@ public class DoctorAddPostActivity extends AppCompatActivity {
     }
 
     private void setupPost() {
+        //  imageViewPost=null;
 
         buttonSharPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               //  imageViewPost=null;
-                  if (etWritPost.getText().toString().isEmpty() || imageViewPost ==null)
+                  if (etWritPost.getText().toString().isEmpty() && picturUri ==null)
                 {
                     showMessage("Complete the post");
                 }
-               else if(!etWritPost.getText().toString().isEmpty() || imageViewPost !=null)
+
+                  else if (!etWritPost.getText().toString().isEmpty() && picturUri ==null)
+                  {
+                      PostItems postItems=new PostItems(etWritPost.getText().toString(),null);
+                      addPosttoDatabase(postItems);
+                  }
+               else if(!etWritPost.getText().toString().isEmpty() || picturUri !=null)
                 {
                     StorageReference storageReference = FirebaseStorage.getInstance().getReference("FCI_imagePost");
                     final StorageReference imagePath = storageReference.child(picturUri.getLastPathSegment());

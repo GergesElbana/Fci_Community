@@ -21,6 +21,10 @@ public class PostItems {
         timeStamp =new Date().getTime();
     }
 
+   /* public PostItems(String postText) {
+        this.postText = postText;
+    }*/
+
     public PostItems() {
     }
 

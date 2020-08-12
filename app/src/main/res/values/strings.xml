@@ -3,4 +3,35 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="write_post">Write a post</string>
+    <string name="Enter_email">Enter email</string>
+    <string name="Enter_password">Enter Password</string>
+    <string name="Login">Login</string>
+    <string name="Enter_Name">Enter Name</string>
+    <string name="Enter_Id">Enter Id</string>
+    <string name="enter_data">Enter Data</string>
+    <string name="Enter_Code">Enter Code :-</string>
+    <string name="Next">Next</string>
+    <string name="End">End</string>
+    <string name="Question">Question :-</string>
+    <string name="enter_question">Enter Question</string>
+    <string name="one_1">1-</string>
+    <string name="Answer_1">Enter Answer 1</string>
+    <string name="tow_2">2-</string>
+    <string name="Answer_2">Enter Answer 2</string>
+    <string name="three_3">3-</string>
+    <string name="Answer_3">Enter Answer 3</string>
+    <string name="four_4">4-</string>
+    <string name="Answer_4">Enter Answer 4</string>
+    <string name="five_5">5-</string>
+    <string name="RightAnswer">Right Answer</string>
+    <string name="Send">Send</string>
+    <string name="time">Time</string>
+    <string name="group_one">Group One</string>
+    <string name="group_tow">Group Tow</string>
+    <string name="group_three">Group Three</string>
+    <string name="group_four">Group Four</string>
+    <string name="Absence">Absence</string>
+    <string name="Assignment">Assignment</string>
+    <string name="Lecture">Lecture</string>
 </resources>
