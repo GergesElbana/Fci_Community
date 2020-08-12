@@ -20,7 +20,7 @@ import com.example.fci_community.R;
  */
 public class dr_Lecture extends Fragment implements View.OnClickListener {
    private   Button btn_1,btn_2,btn_3,btn_4;
-   private String[]subjecto={"IT","CS","IS","ggggg","naaa"};
+  // private String [] subjecto ={"IT","CS","IS","ggggg","naaa"};
 
 
     public static String Nahola;

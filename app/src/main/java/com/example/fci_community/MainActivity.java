@@ -1,6 +1,8 @@
 package com.example.fci_community;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -16,12 +18,22 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
            FirebaseAuth mAuth;
   private  FirebaseAuth.AuthStateListener mAuthstatelistner;
   private  EditText edtPass,edtmail;
 
-
+    /**  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+        Configuration configuration = getResources().getConfiguration();
+        if (isSlectedLanguageRTL) {
+            configuration.setLayoutDirection(new Locale("fa"));
+        } else {
+            configuration.setLayoutDirection(Locale.ENGLISH);
+        }
+        getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
+    }*/
 
 
     @Override

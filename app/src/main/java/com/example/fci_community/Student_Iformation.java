@@ -21,10 +21,9 @@ public class Student_Iformation extends AppCompatActivity {
     public static StudentModuel stm;
     public static String stName, te_Group;
 
-
-   private   RadioGroup groups;
-   private FirebaseDatabase database = FirebaseDatabase.getInstance();
-   private  DatabaseReference myRef = database.getReference();
+    private   RadioGroup groups;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private  DatabaseReference myRef = database.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +49,7 @@ public class Student_Iformation extends AppCompatActivity {
     }
 
     public void StudentData(View view) {
-
+        
         stName = St_Name.getText().toString();
         String stid = St_id.getText().toString();
         String stMail = St_mail.getText().toString();
@@ -93,7 +92,7 @@ public class Student_Iformation extends AppCompatActivity {
                 else if (checkedId==R.id.group_three)
                 {
                     te_Group="GroupThree";
-                    Lecture_Fragment.st_subject=new String[]{"PHP", "BIO","PHIISICS"};
+                    Lecture_Fragment.st_subject=new String[]{"PHP", "BIO","PHIISICS","math"};
                 }
 
                 else if (checkedId==R.id.group_four)
